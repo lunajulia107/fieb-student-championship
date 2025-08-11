@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campeonato - FIEB</title>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Booststrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style/default/default.css">
+  <link rel="stylesheet" href="style/default/header.css">
+  <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body>
+  <header class="container_margin_default">
+    <div class="fieb">
+      <a href="/"> <img src="images/logo.png" alt="Logo - FIEB"> </a>
+    </div>
+    <div class="desc">
+      <div>
+        <h1>Campeonato entre alunos</h1>
+
+        <p>Selecione 8 alunos que você deseja para entrar
+          na competição e depois pressione botão ao lado.</p>
+      </div>
+      <button form="championship" class="xs" id="btn" type="submit">Gerar campeonato</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="home" class="container_margin_default">
+      <div class="default_margin">
+        <form action="/participantes-do-campeonato" method="post" name="formStudents" id="championship">
+          <section id="home_section1" class="container_margin_default">
+            <h2>Alunos</h2>
+
+            <ul id="students">
+              <% for (let student of students) { %>
+              <li tabindex="0">
+                <div>
+                  <label for="name">Nome: <span><%= student.nome %></span></label>
+                  <label for="rm">Rm: <span><%= student.rm %></span></label>
+                </div>
+
+                <div id="identify">
+                  <input name="selectedIds" class="form-check-input" type="checkbox" value="<%= student.id %>" aria-label="...">
+                  <label><strong>Media: <%= student.media %></strong></label>
+                </div>
+              </li>
+              <% } %>
+            </ul>
+
+          </section>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container_margin_default">
+  </footer>
+
+  <script src="script/script.js"></script>
+</body>
+
+</html>

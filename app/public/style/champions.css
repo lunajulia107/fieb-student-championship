@@ -1,0 +1,166 @@
+#container {
+  display: none;
+}
+
+/** Loader - Carregamento dos resultados **/
+#loader-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: var(--purple);
+}
+
+#loader-container div {
+  align-items: center;
+  justify-content: center;
+}
+
+#loader-container div .loader {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin: 15px auto;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 104px 0 #fff, 24px 0 #fff;
+  box-sizing: border-box;
+  animation: shadowPulse 3.5s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #fff;
+    box-shadow: -24px 0 var(--green), 24px 0 #fff;
+  }
+  66% {
+    background: var(--green);
+    box-shadow: -24px 0 #fff, 24px 0 #fff;
+  }
+  100% {
+    background: #fff;
+    box-shadow: -24px 0 #fff, 24px 0 var(--green);
+  }
+}
+
+/* Vencedores do campeonato */
+#champions .default_margin {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 55px;
+}
+
+#champions_section1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 800px;
+  margin-top: -32px;
+  padding: 64px 32px;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%);
+  border-radius: 12px;
+}
+
+#champions_section1 > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#champions_section1 > div .placing {
+  display: flex;
+  width: 100px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#champions_section1 > div .placing h2 {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#champions_section1 > div .placing h2 span {
+  margin: 5px 0 32px 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#champions_section1 > div .placing img {
+  width: 90px;
+}
+
+#champions_section1 ul {
+  width: 80%;
+  border-top: 1px solid var(--border);
+}
+
+#champions_section1 ul li:first-child {
+  margin-top: 10px;
+}
+
+#champions_section1 ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+#champions_section1 ul li p {
+  font-weight: 500;
+}
+
+#champions_section1 ul li div {
+  display: flex;
+  flex-direction: row;
+}
+
+#champions_section1 ul li div p {
+  font-weight: 400;
+}
+
+#champions_section1 ul li div i {
+  font-size: 25px;
+  color: var(--yellow);
+  margin-left: 8px;
+}
+
+/* Responsivo */
+@media (min-width: 320px) and (max-width: 450px) {
+  #champions_section1 {
+    width: 90%;
+    padding: 32px 16px;
+  }
+
+  #champions_section1 > div {
+    flex-direction: column;
+  }
+
+  #champions_section1 > div .placing img {
+    width: 70px;
+  }
+
+  #champions_section1 ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #champions_section1 ul li div {
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 900px) {
+  #champions_section1 {
+    width: 90%;
+  }
+
+  #champions_section1 > div .placing img {
+    width: 80px;
+  }
+}

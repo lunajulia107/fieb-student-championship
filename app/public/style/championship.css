@@ -1,0 +1,118 @@
+/* Participantes do campeonato */
+#championship > div {
+  justify-content: space-between;
+  position: relative;
+  padding-top: 260px;
+  padding-bottom: 40px;
+}
+
+#championship div form {
+  width: 100%;
+}
+
+form #championship_section1 {
+  display: flex;
+  flex-direction: column;
+}
+
+#championship_section1 a {
+  display: flex;
+  align-items: center;
+  color: var(--purple);
+}
+
+#championship_section1 a i {
+  font-size: 25px;
+  color: var(--purple);
+}
+
+#championship_section1 ul {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  margin-top: 24px;
+}
+
+#championship_section1 ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+#championship_section1 ul li div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#championship_section1 ul li div label:first-child {
+  margin-bottom: 5px;
+}
+
+#championship_section1 ul li div label span {
+  font-weight: 400;
+}
+
+#championship_section1 ul li div label strong {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.form-check-input[type="checkbox"] {
+  align-self: flex-end;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Responsivo */
+@media (min-width: 320px) and (max-width: 640px) {
+  .default_margin {
+    width: 90%;
+  }
+
+  form #championship_section1 ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1160px) {
+  .default_margin {
+    width: 90%;
+  }
+
+  form #championship_section1 ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1160px) and (max-width: 1180px) {
+  .default_margin {
+    width: 96%;
+  } 
+
+  header .desc {
+    width: 96%;
+  } 
+}
+
+@media (min-width: 320px) and (max-width: 378px) {
+  #championship > div {
+    padding-top: 380px;
+  }
+}
+
+@media (min-width: 378px) and (max-width: 640px) {
+  #championship > div {
+    padding-top: 320px;
+  }
+}
