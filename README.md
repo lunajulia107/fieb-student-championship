@@ -1,4 +1,4 @@
-# 🏆 Campeonato de Alunos - FIEB
+# 🏆 fieb-student-championship 
 
 **Projeto fullstack para organizar e apresentar um campeonato de alunos**, desenvolvido como desafio técnico proposto pela FIEB. A aplicação seleciona 8 alunos, realiza as disputas com base na média de cada um e exibe o **pódio do campeonato**.
 
